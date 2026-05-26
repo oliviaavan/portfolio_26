@@ -96,20 +96,18 @@ a { color: inherit; text-decoration: none; }
 
 .status__avatar {
   position: relative;
-  width: 52px;
-  height: 52px;
+  width: 68px;
+  height: 68px;
   flex: none;
 }
 .status__photo {
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  background:
-    radial-gradient(circle at 50% 38%, #2a1d12 0 12%, transparent 12.5%),
-    radial-gradient(circle at 50% 75%, #5a3c24 0 26%, transparent 26.5%),
-    linear-gradient(160deg, #efd9b8 0%, #d4ad7a 55%, #8a5a35 100%);
+  background-image: url("images/profile.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 .status__moon {
   position: absolute;
@@ -186,6 +184,7 @@ a { color: inherit; text-decoration: none; }
 
 .work {
   padding: 0 var(--pad-x) 96px;
+  scroll-margin-top: 110px;
 }
 
 .grid {
@@ -220,6 +219,57 @@ a.card:hover,
   transform: translateY(-2px);
 }
 
+a.card,
+a.card * {
+  cursor: none;
+}
+
+.case-pill {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-sans, inherit);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  border-radius: 999px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transform: translate(-50%, -50%) scale(.85);
+  opacity: 0;
+  transition: opacity .15s ease, transform .15s ease;
+  will-change: left, top, opacity, transform;
+}
+
+.case-pill__emoji {
+  font-size: 13px;
+  line-height: 1;
+  display: inline-block;
+}
+
+.case-pill.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+@media (hover: none) {
+  a.card,
+  a.card * {
+    cursor: auto;
+  }
+  .case-pill {
+    display: none;
+  }
+}
+
 .card__meta {
   display: flex;
   justify-content: space-between;
@@ -236,6 +286,48 @@ a.card:hover,
   background: var(--card-bg);
   border-radius: 4px;
   margin-bottom: 18px;
+}
+
+.card__cover--trimble {
+  background-image: url("images/trimble-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__cover--between {
+  background-image: url("images/between-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__cover--hearbat {
+  background-image: url("images/hearbat-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__cover--atlas {
+  background-image: url("images/atlas-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__cover--creative-juices {
+  background-image: url("images/creative-juices-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__cover--design-lecture-series {
+  background-image: url("images/design-lecture-series-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card__head {

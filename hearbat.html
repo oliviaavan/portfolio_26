@@ -86,7 +86,7 @@
         </div>
       </dl>
 
-      <div class="case__cover" aria-hidden="true"></div>
+      <div class="case__cover case__cover--hearbat" aria-hidden="true"></div>
 
       <!-- OVERVIEW -->
       <section id="overview" class="case__section">
@@ -119,7 +119,7 @@
 
         <div class="compare">
           <div class="compare__panel">
-            <span class="compare__label">✦ Competitors ✦</span>
+            <span class="compare__label">Competitors</span>
             <div class="compare__logos">
               <span class="compare__logo">HEAROES</span>
               <span class="compare__logo compare__logo--alt">WordSuccess</span>
@@ -165,24 +165,41 @@
           HearBat turns the four opportunity areas into a single, calm experience: personalized practice, adaptive learning, real-world listening support, and gentle motivation. Together, they give cochlear implant recipients a tool that meets them where they are in their rehabilitation journey.
         </p>
 
-        <div class="solution__media" aria-hidden="true"></div>
-
-        <div class="opps">
-          <article class="opp">
-            <h3>Custom flashcards.</h3>
-            <p>Users can build their own listening sets, giving practice a personal feel and a flexible pace.</p>
+        <div class="opps opps--stack">
+          <article class="opp opp--row">
+            <div class="opp__copy">
+              <h3>Background noise simulation, difficulty levels and progressive paths.</h3>
+              <p>Practice in cafés, classrooms, or workplaces, training the brain to filter speech from real-world environments before facing them. Lessons scale from beginner to advanced, so new recipients can build confidence and experienced users stay challenged without plateauing.</p>
+            </div>
+            <div class="opp__screens" aria-hidden="true">
+              <img src="images/hearbat/hearbat2.png" alt="" loading="lazy" />
+              <img src="images/hearbat/difficulty.png" alt="" loading="lazy" />
+              <img src="images/hearbat/hard.png" alt="" loading="lazy" />
+            </div>
           </article>
-          <article class="opp">
-            <h3>Background noise simulation.</h3>
-            <p>Practice in cafés, classrooms, or workplaces, training the brain to filter speech from real-world environments before facing them.</p>
+          <article class="opp opp--row">
+            <div class="opp__copy">
+              <h3>Streaks, milestones, and speech to text.</h3>
+              <p>Daily goals and small wins keep long-term rehabilitation feeling like steady progress, with speech to text as a built-in accessibility companion.</p>
+            </div>
+            <div class="opp__screens" aria-hidden="true">
+              <img src="images/hearbat/sp.png" alt="" loading="lazy" />
+              <img src="images/hearbat/spp.png" alt="" loading="lazy" />
+              <img src="images/hearbat/in.png" alt="" loading="lazy" />
+              <img src="images/hearbat/module.png" alt="" loading="lazy" />
+            </div>
           </article>
-          <article class="opp">
-            <h3>Difficulty levels and progressive paths.</h3>
-            <p>Lessons scale from beginner to advanced, so new recipients can build confidence and experienced users stay challenged without plateauing.</p>
-          </article>
-          <article class="opp">
-            <h3>Streaks, milestones, and speech to text.</h3>
-            <p>Daily goals and small wins keep long-term rehabilitation feeling like steady progress, with speech to text as a built-in accessibility companion.</p>
+          <article class="opp opp--row">
+            <div class="opp__copy">
+              <h3>Custom flashcards.</h3>
+              <p>Users can build their own listening sets, giving practice a personal feel and a flexible pace.</p>
+            </div>
+            <div class="opp__screens" aria-hidden="true">
+              <img src="images/hearbat/name-module.png" alt="" loading="lazy" />
+              <img src="images/hearbat/CMB2.png" alt="" loading="lazy" />
+              <img src="images/hearbat/CMB3.png" alt="" loading="lazy" />
+              <img src="images/hearbat/module.png" alt="" loading="lazy" />
+            </div>
           </article>
         </div>
       </section>
@@ -190,11 +207,27 @@
       <!-- FINAL SCREENS -->
       <section id="screens" class="case__section">
         <p class="case__kicker">Final Screens</p>
-        <h2 class="case__h2">A calm, focused interface that keeps practice front and center.</h2>
+        <h2 class="case__h2">A gamified experience that turns rehabilitation into something users want to keep coming back to.</h2>
         <p class="case__body">
-          The final screens bring HearBat's four pillars together into a cohesive product — onboarding, daily practice, adaptive lessons, and progress tracking — designed to feel approachable for first-time recipients and motivating for long-term users.
+          The final screens bring HearBat's four pillars together into a cohesive product — onboarding, daily practice, adaptive lessons, and progress tracking — designed to feel approachable for first-time recipients and rewarding enough to keep long-term users engaged.
         </p>
-        <div class="screens__media" aria-hidden="true"></div>
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport">
+            <ul class="carousel__track">
+              <li class="carousel__slide"><img src="images/hearbat/hearbat1.png" alt="HearBat final screen 1" loading="lazy" /></li>
+              <li class="carousel__slide"><img src="images/hearbat/hearbat2.png" alt="HearBat final screen 2" loading="lazy" /></li>
+              <li class="carousel__slide"><img src="images/hearbat/hearbat3.png" alt="HearBat final screen 3" loading="lazy" /></li>
+              <li class="carousel__slide"><img src="images/hearbat/hearbat4.png" alt="HearBat final screen 4" loading="lazy" /></li>
+            </ul>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Previous screen" type="button">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Next screen" type="button">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="carousel__dots" role="tablist" aria-label="Choose screen"></div>
+        </div>
       </section>
 
       <!-- REFLECTION -->

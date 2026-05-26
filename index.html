@@ -62,7 +62,7 @@
           <header class="card__meta">
             <span class="card__cat">UX DESIGN</span>
           </header>
-          <div class="card__cover" aria-hidden="true"></div>
+          <div class="card__cover card__cover--trimble" aria-hidden="true"></div>
           <div class="card__head">
             <h3 class="card__title">Trimble</h3>
             <div class="card__tags"><span class="tag">INTERNSHIP</span></div>
@@ -74,7 +74,7 @@
           <header class="card__meta">
             <span class="card__cat">PRODUCT DESIGN</span>
           </header>
-          <div class="card__cover" aria-hidden="true"></div>
+          <div class="card__cover card__cover--hearbat" aria-hidden="true"></div>
           <div class="card__head">
             <h3 class="card__title">HearBat</h3>
             <div class="card__tags">
@@ -89,7 +89,7 @@
           <header class="card__meta">
             <span class="card__cat">PRODUCT DESIGN</span>
           </header>
-          <div class="card__cover" aria-hidden="true"></div>
+          <div class="card__cover card__cover--atlas" aria-hidden="true"></div>
           <div class="card__head">
             <h3 class="card__title">Atlas</h3>
             <div class="card__tags"><span class="tag">SIDE PROJECT</span></div>
@@ -101,7 +101,7 @@
           <header class="card__meta">
             <span class="card__cat">PRODUCT DESIGN</span>
           </header>
-          <div class="card__cover" aria-hidden="true"></div>
+          <div class="card__cover card__cover--between" aria-hidden="true"></div>
           <div class="card__head">
             <h3 class="card__title">between</h3>
             <div class="card__tags"><span class="tag">SIDE PROJECT</span></div>
@@ -113,7 +113,7 @@
           <header class="card__meta">
             <span class="card__cat">GRAPHIC DESIGN</span>
           </header>
-          <div class="card__cover" aria-hidden="true"></div>
+          <div class="card__cover card__cover--creative-juices" aria-hidden="true"></div>
           <div class="card__head">
             <h3 class="card__title">Creative Juices</h3>
             <div class="card__tags"><span class="tag">SIDE PROJECT</span></div>
@@ -125,7 +125,7 @@
           <header class="card__meta">
             <span class="card__cat">GRAPHIC DESIGN</span>
           </header>
-          <div class="card__cover" aria-hidden="true"></div>
+          <div class="card__cover card__cover--design-lecture-series" aria-hidden="true"></div>
           <div class="card__head">
             <h3 class="card__title">Design Lecture Series</h3>
             <div class="card__tags"><span class="tag">SIDE PROJECT</span></div>
@@ -154,12 +154,12 @@
       if (!el) return;
 
       const lines = [
-        "making matcha",
-        "binging anime",
-        "cuddling my two cats",
-        "bouldering a v2",
-        "sketching at the cafe",
-        "deep in a figma file",
+        "making matcha 🍵",
+        "binging anime 📺",
+        "cuddling my two cats 🐈",
+        "bouldering a v2 🧗",
+        "sketching at the cafe ☕",
+        "deep in a figma file 🎨",
       ];
 
       const TYPE_MS = 60;     // per-character typing speed
@@ -172,14 +172,14 @@
 
       const loop = async () => {
         while (true) {
-          const word = lines[i];
-          for (let n = 1; n <= word.length; n++) {
-            el.textContent = word.slice(0, n);
+          const chars = [...lines[i]];
+          for (let n = 1; n <= chars.length; n++) {
+            el.textContent = chars.slice(0, n).join("");
             await sleep(TYPE_MS);
           }
           await sleep(HOLD_MS);
-          for (let n = word.length; n >= 0; n--) {
-            el.textContent = word.slice(0, n);
+          for (let n = chars.length; n >= 0; n--) {
+            el.textContent = chars.slice(0, n).join("");
             await sleep(ERASE_MS);
           }
           await sleep(GAP_MS);
@@ -188,6 +188,36 @@
       };
 
       loop();
+    })();
+  </script>
+
+  <script>
+    (() => {
+      if (window.matchMedia && window.matchMedia("(hover: none)").matches) return;
+
+      const pill = document.createElement("div");
+      pill.className = "case-pill";
+      pill.innerHTML = '<span>VIEW CASE STUDY</span><span class="case-pill__emoji" aria-hidden="true">👀</span>';
+      document.body.appendChild(pill);
+
+      let raf = 0;
+      let x = 0, y = 0;
+      const move = (e) => {
+        x = e.clientX;
+        y = e.clientY;
+        if (raf) return;
+        raf = requestAnimationFrame(() => {
+          pill.style.left = x + "px";
+          pill.style.top = y + "px";
+          raf = 0;
+        });
+      };
+
+      document.querySelectorAll("a.card").forEach((card) => {
+        card.addEventListener("mouseenter", () => pill.classList.add("is-visible"));
+        card.addEventListener("mouseleave", () => pill.classList.remove("is-visible"));
+        card.addEventListener("mousemove", move);
+      });
     })();
   </script>
 

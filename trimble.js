@@ -3,10 +3,15 @@
 // the client. It only keeps casual visitors from stumbling onto NDA content.
 (() => {
   const PASSWORD = "Trimble2026";
-  const STORAGE_KEY = "trimble:unlocked";
 
   const gate = document.getElementById("trimble-gate");
   if (!gate) return;
+
+  // Always start locked — clear any prior unlock state from older versions.
+  try {
+    sessionStorage.removeItem("trimble:unlocked");
+    localStorage.removeItem("trimble:unlocked");
+  } catch (_) {}
 
   const locked = gate.querySelector('[data-gate="locked"]');
   const unlocked = gate.querySelector('[data-gate="unlocked"]');
@@ -19,15 +24,9 @@
     unlocked.hidden = false;
   };
 
-  if (sessionStorage.getItem(STORAGE_KEY) === "1") {
-    reveal();
-    return;
-  }
-
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (input.value === PASSWORD) {
-      sessionStorage.setItem(STORAGE_KEY, "1");
       error.textContent = "";
       reveal();
     } else {
