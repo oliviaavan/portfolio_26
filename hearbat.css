@@ -10,9 +10,7 @@
 
 .case__back {
   display: block;
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: 8px var(--pad-x) 0;
+  margin-bottom: 14px;
   font-size: 13px;
   color: var(--ink-mute);
 }
@@ -21,8 +19,6 @@
 /* ---------- TWO-COLUMN WRAPPER (TOC + content) ---------- */
 
 .case-wrap {
-  max-width: 1360px;
-  margin: 0 auto;
   padding: 32px var(--pad-x) 96px;
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -37,21 +33,27 @@
   }
 }
 
-/* ---------- TOC WIDGET (sticky) ---------- */
+/* ---------- LEFT RAIL (back link + TOC scroll together) ---------- */
+
+.case-rail {
+  position: sticky;
+  top: 88px;
+  align-self: start;
+}
+@media (max-width: 900px) {
+  .case-rail {
+    position: static;
+    margin-bottom: 16px;
+  }
+}
+
+/* ---------- TOC WIDGET ---------- */
 
 .toc {
-  position: sticky;
-  top: 90px;
   border: 1px solid var(--ink);
   border-radius: 6px;
   padding: 16px 16px 18px;
   background: #fff;
-}
-@media (max-width: 900px) {
-  .toc {
-    position: static;
-    margin-bottom: 16px;
-  }
 }
 
 .toc__title {
@@ -107,7 +109,6 @@
 
 .case {
   min-width: 0;        /* allow grid child to shrink */
-  max-width: 980px;
 }
 
 .case__head { margin-bottom: 28px; }
@@ -121,19 +122,18 @@
 }
 
 .case__sub {
-  font-size: 16px;
-  line-height: 1.55;
-  color: var(--ink-mute);
-  margin: 0;
-  max-width: 70ch;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 6px 0 0;
 }
 
 .case__cover {
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #d9d9d9;
-  border-radius: 6px;
-  margin-bottom: 24px;
+  border-radius: 18px;
+  margin-bottom: 22px;
 }
 
 /* meta strip */
@@ -142,9 +142,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  padding: 6px 0 36px;
+  padding: 6px 0 0;
   margin: 0 0 32px;
-  border-bottom: 1px solid var(--hb-line);
 }
 .case__meta > div { margin: 0; }
 .case__meta dt {
@@ -195,7 +194,6 @@
   line-height: 1.65;
   color: var(--ink-mute);
   margin: 0 0 16px;
-  max-width: 68ch;
 }
 
 /* ---------- CHALLENGE CALLOUT ---------- */
@@ -332,6 +330,49 @@
   letter-spacing: -.005em;
 }
 .opp p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* ---------- SOLUTION / FINAL SCREENS MEDIA ---------- */
+
+.solution__media,
+.screens__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #d9d9d9;
+  border-radius: 6px;
+  margin: 18px 0 24px;
+}
+
+/* ---------- REFLECTION CARDS ---------- */
+
+.reflect {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+@media (max-width: 720px) {
+  .reflect { grid-template-columns: 1fr; }
+}
+
+.reflect__card {
+  background: var(--hb-soft);
+  border-radius: 8px;
+  padding: 18px 20px 20px;
+}
+.reflect__kicker {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.reflect__card p:last-child {
   font-size: 13px;
   line-height: 1.55;
   color: var(--ink);

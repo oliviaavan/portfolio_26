@@ -1,0 +1,43 @@
+/* Atlas case study — additions on top of hearbat.css */
+
+.case__quotes {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.case__quotes li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink);
+  padding-left: 18px;
+  position: relative;
+  font-style: italic;
+}
+.case__quotes li::before {
+  content: "“";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-style: normal;
+  color: var(--ink-mute);
+}
+
+/* Final-screens phone trio */
+.screens__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+@media (max-width: 720px) {
+  .screens__row { grid-template-columns: 1fr; }
+}
+.screens__phone {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: #d9d9d9;
+  border-radius: 12px;
+}

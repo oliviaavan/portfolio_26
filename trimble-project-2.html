@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WorkCenter — Unified Platform Revamp · Olivia Van</title>
+  <meta name="description" content="WorkCenter — Unified Platform Revamp. Designing interfaces where unified data and agentic AI meet the user. NDA-gated case study by Olivia Van." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="hearbat.css?v=2" />
+  <link rel="stylesheet" href="atlas.css" />
+  <link rel="stylesheet" href="trimble.css" />
+
+  <script>
+    if (sessionStorage.getItem("trimble:unlocked") !== "1") {
+      window.location.replace("trimble.html");
+    }
+  </script>
+</head>
+<body>
+
+  <header class="masthead">
+    <a href="index.html" class="wordmark">olivia van</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#play">Play</a>
+    </nav>
+
+    <div class="masthead__social">
+      <a href="#" class="social-link" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      <a href="#" class="social-link" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="#" class="social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="case-wrap">
+
+    <div class="case-rail">
+      <a href="trimble.html" class="case__back">← Back to Trimble</a>
+
+    <aside class="toc" aria-label="On this page">
+      <p class="toc__title">Table of Contents</p>
+      <ol class="toc__list">
+        <li><a href="#overview" data-toc>Overview</a></li>
+        <li><a href="#problem" data-toc>Problem</a></li>
+        <li><a href="#role" data-toc>My Role</a></li>
+        <li><a href="#designs" data-toc>Designs</a></li>
+        <li><a href="#screens" data-toc>Final Screens</a></li>
+      </ol>
+    </aside>
+    </div>
+
+    <article class="case">
+
+      <!-- Project tab nav -->
+      <nav class="proj-tabs" aria-label="Trimble projects">
+        <a class="proj-tab" href="trimble-project-1.html">
+          <span class="proj-tab__no">01</span>
+          <span>Trimble Financials — Validation for Launch</span>
+        </a>
+        <a class="proj-tab is-active" href="trimble-project-2.html" aria-current="page">
+          <span class="proj-tab__no">02</span>
+          <span>WorkCenter — Unified Platform Revamp</span>
+        </a>
+      </nav>
+
+      <header class="case__head proj-head">
+        <div class="proj-head__row">
+          <h1 class="case__title proj-head__title">WorkCenter — Unified Platform Revamp</h1>
+        </div>
+        <p class="case__sub">
+          Designing interfaces for WorkCenter, a Trimble platform being reimagined as a single connected hub for construction teams. The revamp removes the need for separate access across products and uses agentic AI to streamline workflows across the project lifecycle.
+        </p>
+        <ul class="proj-head__tags">
+          <li class="chip">Interaction Design</li>
+          <li class="chip">Systems Thinking</li>
+          <li class="chip">AI Integration</li>
+        </ul>
+      </header>
+
+      <div class="case__cover" aria-hidden="true"></div>
+
+      <!-- OVERVIEW -->
+      <section id="overview" class="case__section">
+        <p class="case__kicker">Overview</p>
+        <p class="case__body">
+          WorkCenter today is a portal contractors use to reach a handful of Trimble products, each requiring its own access and living in its own silo. The revamp reimagines WorkCenter as a unified workspace where capabilities, data, and AI-driven workflows live together in one place — organized around how construction teams actually work, not around which product each task belongs to.
+        </p>
+      </section>
+
+      <!-- PROBLEM -->
+      <section id="problem" class="case__section">
+        <p class="case__kicker">Problem</p>
+        <p class="case__body">
+          Construction teams rely on a sprawling stack of tools for bidding, estimating, scheduling, procurement, field, and finance work. Those tools don't share data or context, so teams jump between systems to piece together a single view of a project. The interfaces needed to surface unified data and agentic AI actions in a way that feels familiar to construction workflows, without asking users to learn a new mental model on top of the work they already do.
+        </p>
+      </section>
+
+      <!-- MY ROLE -->
+      <section id="role" class="case__section">
+        <p class="case__kicker">My Role</p>
+        <h2 class="case__h2">Designing the interfaces where unified data and agentic AI meet the user.</h2>
+        <p class="case__body">
+          I worked alongside UX managers, senior designers, and a technical intern on the WorkCenter design team. My contributions focused on the interface layer — translating cross-team strategy into screens that feel coherent, contextual, and grounded in real construction workflows.
+        </p>
+        <ul class="case__list">
+          <li>Designed key interfaces across the WorkCenter experience.</li>
+          <li>Partnered with senior designers and managers to align on patterns, components, and AI interaction language.</li>
+          <li>Iterated on screens based on team critique and evolving product direction.</li>
+        </ul>
+      </section>
+
+      <!-- DESIGNS -->
+      <section id="designs" class="case__section">
+        <p class="case__kicker">Designs</p>
+        <h2 class="case__h2">One platform, a dashboard that adapts to your role.</h2>
+        <p class="case__body">
+          Rather than a single generic landing page, WorkCenter shapes its home view around who's signed in. The same unified data and agentic AI surface differently for a project manager overseeing the whole portfolio versus an estimator deep in a single bid — each persona lands on the work that matters most to them.
+        </p>
+
+        <div class="persona-compare">
+          <figure class="persona">
+            <img class="persona__shot" src="images/wc-dashboard-pm.jpg" alt="WorkCenter home dashboard for a general contractor / project manager, showing an estimates overview, prioritized tasks with AI-flagged risks, and a calendar." loading="lazy" />
+            <figcaption>
+              <p class="persona__role">GC / Project Manager</p>
+              <p class="persona__name">Portfolio-level overview</p>
+              <p class="persona__desc">A wide view across every project — estimate progress, prioritized tasks with AI-flagged risks, and an at-a-glance schedule for managing the whole book of work.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="persona">
+            <img class="persona__shot" src="images/wc-dashboard-estimator.jpg" alt="WorkCenter home dashboard for an estimator, showing a shared bid assembly hub, a cost estimate workflow with handoff statuses, and live supplier exchange pricing." loading="lazy" />
+            <figcaption>
+              <p class="persona__role">Estimator</p>
+              <p class="persona__name">Bid-level workspace</p>
+              <p class="persona__desc">A focused view into a single estimate — a shared bid assembly hub, deliverable handoffs and statuses, and live supplier pricing pulled in to keep the number accurate.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- FINAL SCREENS -->
+      <section id="screens" class="case__section">
+        <p class="case__kicker">Final Screens</p>
+        <h2 class="case__h2">Content coming soon.</h2>
+        <p class="case__body">Content coming soon.</p>
+
+        <div class="screens__media" aria-hidden="true"></div>
+        <div class="screens__row">
+          <div class="screens__phone" aria-hidden="true"></div>
+          <div class="screens__phone" aria-hidden="true"></div>
+          <div class="screens__phone" aria-hidden="true"></div>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <footer class="foot">
+    <div class="foot__inner">
+      <p class="foot__say">what's your story?<br/>i'd love to know!</p>
+      <ul class="foot__links">
+        <li><a href="mailto:hi@oliviavan.design">Email</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="hearbat.js" defer></script>
+</body>
+</html>

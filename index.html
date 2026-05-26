@@ -23,6 +23,18 @@
       <a href="#about">About</a>
       <a href="#play">Play</a>
     </nav>
+
+    <div class="masthead__social">
+      <a href="#" class="social-link" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      <a href="#" class="social-link" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="#" class="social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
   </header>
 
   <main id="top">
@@ -35,7 +47,7 @@
         </div>
         <div class="status__bubble">
           <span class="status__tail" aria-hidden="true"></span>
-          making matcha
+          <span class="status__text" id="status-text" aria-live="polite"></span><span class="status__caret" aria-hidden="true"></span>
         </div>
       </div>
 
@@ -46,9 +58,8 @@
     <section id="work" class="work">
       <div class="grid">
 
-        <article class="card">
+        <a class="card" href="trimble.html">
           <header class="card__meta">
-            <span class="card__no">NO.1</span>
             <span class="card__cat">UX DESIGN</span>
           </header>
           <div class="card__cover" aria-hidden="true"></div>
@@ -57,11 +68,10 @@
             <div class="card__tags"><span class="tag">INTERNSHIP</span></div>
           </div>
           <p class="card__desc">Designed and usability-tested high-fidelity prototypes, focusing on validating workflows, dashboards, and financial views with small business contractors.</p>
-        </article>
+        </a>
 
         <a class="card card--link" href="hearbat.html">
           <header class="card__meta">
-            <span class="card__no">NO.2</span>
             <span class="card__cat">PRODUCT DESIGN</span>
           </header>
           <div class="card__cover" aria-hidden="true"></div>
@@ -75,9 +85,8 @@
           <p class="card__desc">Top 100 global winner for HearBat, an app that helps cochlear implant users strengthen their hearing through gamified training.</p>
         </a>
 
-        <article class="card">
+        <a class="card" href="atlas.html">
           <header class="card__meta">
-            <span class="card__no">NO.3</span>
             <span class="card__cat">PRODUCT DESIGN</span>
           </header>
           <div class="card__cover" aria-hidden="true"></div>
@@ -86,11 +95,10 @@
             <div class="card__tags"><span class="tag">SIDE PROJECT</span></div>
           </div>
           <p class="card__desc">Designed a community built map that challenges algorithm driven discovery by surfacing overlooked local spots, stories, and shared experiences across Oregon.</p>
-        </article>
+        </a>
 
-        <article class="card">
+        <a class="card" href="between.html">
           <header class="card__meta">
-            <span class="card__no">NO.4</span>
             <span class="card__cat">PRODUCT DESIGN</span>
           </header>
           <div class="card__cover" aria-hidden="true"></div>
@@ -99,11 +107,10 @@
             <div class="card__tags"><span class="tag">SIDE PROJECT</span></div>
           </div>
           <p class="card__desc">An AI-driven wearable and app that helps long distance couples, friends, and families stay emotionally connected through haptics, mood sharing, and gentle daily rituals.</p>
-        </article>
+        </a>
 
-        <article class="card">
+        <a class="card" href="creative-juices.html">
           <header class="card__meta">
-            <span class="card__no">NO.5</span>
             <span class="card__cat">GRAPHIC DESIGN</span>
           </header>
           <div class="card__cover" aria-hidden="true"></div>
@@ -111,21 +118,20 @@
             <h3 class="card__title">Creative Juices</h3>
             <div class="card__tags"><span class="tag">SIDE PROJECT</span></div>
           </div>
-          <p class="card__desc">Designed a community built map that challenges algorithm driven discovery by surfacing overlooked local spots, stories, and shared experiences across Oregon.</p>
-        </article>
+          <p class="card__desc">A branding and event campaign for a laid-back creative happy hour centered around drinks, tapas, and community connection through playful editorial-inspired visuals.</p>
+        </a>
 
-        <article class="card">
+        <a class="card" href="design-lecture-series.html">
           <header class="card__meta">
-            <span class="card__no">NO.6</span>
             <span class="card__cat">GRAPHIC DESIGN</span>
           </header>
           <div class="card__cover" aria-hidden="true"></div>
           <div class="card__head">
-            <h3 class="card__title">between</h3>
+            <h3 class="card__title">Design Lecture Series</h3>
             <div class="card__tags"><span class="tag">SIDE PROJECT</span></div>
           </div>
-          <p class="card__desc">An AI-driven wearable and app that helps long distance couples, friends, and families stay emotionally connected through haptics, mood sharing, and gentle daily rituals.</p>
-        </article>
+          <p class="card__desc">A branding and event campaign for a recurring lecture series that brings working designers, students, and creative community members together around talks from leading graphic designers.</p>
+        </a>
 
       </div>
     </section>
@@ -141,6 +147,49 @@
       </ul>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const el = document.getElementById("status-text");
+      if (!el) return;
+
+      const lines = [
+        "making matcha",
+        "binging anime",
+        "cuddling my two cats",
+        "bouldering a v2",
+        "sketching at the cafe",
+        "deep in a figma file",
+      ];
+
+      const TYPE_MS = 60;     // per-character typing speed
+      const ERASE_MS = 35;    // per-character erase speed
+      const HOLD_MS = 1600;   // pause once fully typed
+      const GAP_MS = 400;     // pause once fully erased
+
+      let i = 0;
+      const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+      const loop = async () => {
+        while (true) {
+          const word = lines[i];
+          for (let n = 1; n <= word.length; n++) {
+            el.textContent = word.slice(0, n);
+            await sleep(TYPE_MS);
+          }
+          await sleep(HOLD_MS);
+          for (let n = word.length; n >= 0; n--) {
+            el.textContent = word.slice(0, n);
+            await sleep(ERASE_MS);
+          }
+          await sleep(GAP_MS);
+          i = (i + 1) % lines.length;
+        }
+      };
+
+      loop();
+    })();
+  </script>
 
 </body>
 </html>

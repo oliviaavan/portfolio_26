@@ -1,0 +1,63 @@
+/* between case study — additions on top of hearbat.css + atlas.css */
+
+/* Concept callout — large italic wordmark */
+.callout.concept {
+  padding: 28px 28px 32px;
+}
+.concept__name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(36px, 4.5vw, 54px);
+  line-height: 1;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin: 4px 0 12px;
+  max-width: none;
+}
+
+/* Two-column opps variant */
+.opps--two {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 600px) {
+  .opps--two { grid-template-columns: 1fr; }
+}
+
+/* Rituals list */
+.rituals {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ritual {
+  background: var(--hb-soft);
+  border-radius: 8px;
+  padding: 16px 20px 18px;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.ritual__num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--ink-mute);
+  padding-top: 3px;
+}
+.ritual h3 {
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -.005em;
+}
+.ritual p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
