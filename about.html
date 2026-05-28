@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Olivia Van</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="masthead">
+    <a href="index.html" class="wordmark">olivia van</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="index.html#play">Play</a>
+    </nav>
+
+    <div class="masthead__social">
+      <a href="mailto:hi@oliviavan.design" class="social-link" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      <a href="#" class="social-link" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="#" class="social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="about">
+
+    <section class="about__intro">
+      <div class="about__copy">
+        <p>Hello there, I'm Olivia! I'm a Vietnamese-American designer with a focus in UX. I have a passion for blending functionality and creativity to create experiences that feel both intuitive and emotionally engaging. Alongside UX, I also love exploring branding, illustration, storytelling, and interactive design.</p>
+        <p>A lot of my work is inspired by themes of identity and human connection, combining digital experiences with expressive visuals and experimentation. I enjoy exploring programming and interactive media as tools to bring ideas to life in more dynamic ways.</p>
+        <p>When I'm not glued to my electronics and designing, I'm out and about, indulging in nature or at the Oregon Zoo. If I'm not out, I'm baking in the comfort of my home.</p>
+      </div>
+      <a href="mailto:ovan@pdx.edu" class="about__portrait" aria-label="Contact Olivia"></a>
+    </section>
+
+    <section class="favorites" aria-labelledby="favorites-title">
+      <h2 id="favorites-title" class="section-eyebrow">SOME OF MY RECENT FAVORITE THINGS</h2>
+
+      <div class="fav-carousel">
+        <button class="fav-carousel__btn fav-carousel__btn--prev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        </button>
+
+        <div class="rotator" id="favorites-rotator" aria-live="polite">
+          <div class="rotator__slide is-active" data-slide="0">
+            <article class="fav-card">
+              <p class="fav-card__category">SHOWS</p>
+              <div class="fav-card__media" aria-hidden="true"></div>
+              <p class="fav-card__label">TBA</p>
+            </article>
+            <article class="fav-card">
+              <p class="fav-card__category">ANIME</p>
+              <div class="fav-card__media" aria-hidden="true"></div>
+              <p class="fav-card__label">TBA</p>
+            </article>
+            <article class="fav-card">
+              <p class="fav-card__category">MOVIES</p>
+              <div class="fav-card__media" aria-hidden="true"></div>
+              <p class="fav-card__label">TBA</p>
+            </article>
+          </div>
+
+          <div class="rotator__slide" data-slide="1">
+            <article class="fav-card">
+              <p class="fav-card__category">SONGS</p>
+              <div class="fav-card__media" aria-hidden="true"></div>
+              <p class="fav-card__label">TBA</p>
+            </article>
+            <article class="fav-card">
+              <p class="fav-card__category">GAMES</p>
+              <div class="fav-card__media" aria-hidden="true"></div>
+              <p class="fav-card__label">TBA</p>
+            </article>
+            <article class="fav-card">
+              <p class="fav-card__category">BOOKS</p>
+              <div class="fav-card__media" aria-hidden="true"></div>
+              <p class="fav-card__label">TBA</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="fav-carousel__btn fav-carousel__btn--next" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="rotator__dots" id="favorites-dots" role="tablist" aria-label="Favorites pages">
+        <button class="rotator__dot is-active" data-target="0" aria-label="Page 1"></button>
+        <button class="rotator__dot" data-target="1" aria-label="Page 2"></button>
+      </div>
+    </section>
+
+    <section class="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title" class="section-eyebrow">EXPERIENCE</h2>
+
+      <ol class="timeline">
+        <li class="timeline__item">
+          <div class="timeline__when">
+            <span class="timeline__dates">June 2025 — Present</span>
+            <span class="timeline__loc">Lake Oswego, OR</span>
+          </div>
+          <div class="timeline__what">
+            <h3 class="timeline__role">UX Design Intern</h3>
+            <p class="timeline__where">Trimble</p>
+            <p class="timeline__summary">Designed and usability-tested high-fidelity prototypes for accounting and project management workflows, partnering with designers, researchers, and developers to validate complex product experiences within the company's design system.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item">
+          <div class="timeline__when">
+            <span class="timeline__dates">November 2024 — Present</span>
+            <span class="timeline__loc">Portland, OR</span>
+          </div>
+          <div class="timeline__what">
+            <h3 class="timeline__role">Graphic Designer</h3>
+            <p class="timeline__where">Dress For Success Oregon</p>
+            <p class="timeline__summary">Designing social media graphics and standardizing brand identity across platforms to drive community engagement and establish a uniform visual voice for the nonprofit.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item">
+          <div class="timeline__when">
+            <span class="timeline__dates">June 2024 — August 2024</span>
+            <span class="timeline__loc">Portland, OR</span>
+          </div>
+          <div class="timeline__what">
+            <h3 class="timeline__role">Design Intern</h3>
+            <p class="timeline__where">Thesis</p>
+            <p class="timeline__summary">Designed digital advertisements for HP and branded internal templates for Estée Lauder, while shadowing creative projects for clients including Nike, Spotify, and Adobe.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="foot" id="play">
+    <div class="foot__inner">
+      <p class="foot__say">what's your story?<br/>i'd love to know!</p>
+      <ul class="foot__links">
+        <li><a href="mailto:hi@oliviavan.design">Email</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      if (window.matchMedia && window.matchMedia("(hover: none)").matches) return;
+      const portrait = document.querySelector(".about__portrait");
+      if (!portrait) return;
+
+      const pill = document.createElement("div");
+      pill.className = "case-pill";
+      pill.innerHTML = '<span>CONTACT</span><span class="case-pill__emoji" aria-hidden="true">✉️</span>';
+      document.body.appendChild(pill);
+
+      let raf = 0, x = 0, y = 0;
+      const move = (e) => {
+        x = e.clientX;
+        y = e.clientY;
+        if (raf) return;
+        raf = requestAnimationFrame(() => {
+          pill.style.left = x + "px";
+          pill.style.top = y + "px";
+          raf = 0;
+        });
+      };
+
+      portrait.addEventListener("mouseenter", () => pill.classList.add("is-visible"));
+      portrait.addEventListener("mouseleave", () => pill.classList.remove("is-visible"));
+      portrait.addEventListener("mousemove", move);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const rotator = document.getElementById("favorites-rotator");
+      if (!rotator) return;
+      const slides = [...rotator.querySelectorAll(".rotator__slide")];
+      const dots = [...document.querySelectorAll("#favorites-dots .rotator__dot")];
+      const prev = document.querySelector(".fav-carousel__btn--prev");
+      const next = document.querySelector(".fav-carousel__btn--next");
+      let i = 0;
+
+      const show = (n) => {
+        i = (n + slides.length) % slides.length;
+        slides.forEach((s, idx) => s.classList.toggle("is-active", idx === i));
+        dots.forEach((d, idx) => d.classList.toggle("is-active", idx === i));
+      };
+
+      prev?.addEventListener("click", () => show(i - 1));
+      next?.addEventListener("click", () => show(i + 1));
+      dots.forEach((d) => d.addEventListener("click", () => show(+d.dataset.target)));
+    })();
+  </script>
+
+</body>
+</html>
