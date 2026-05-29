@@ -15,8 +15,8 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="hearbat.css?v=2" />
-  <link rel="stylesheet" href="atlas.css" />
-  <link rel="stylesheet" href="between.css" />
+  <link rel="stylesheet" href="atlas.css?v=2" />
+  <link rel="stylesheet" href="between.css?v=3" />
 </head>
 <body>
 
@@ -54,10 +54,6 @@
         <li><a href="#problem" data-toc>Problem</a></li>
         <li><a href="#archetype" data-toc>Archetype</a></li>
         <li><a href="#solution" data-toc>Solution</a></li>
-        <li><a href="#concept" data-toc>Concept</a></li>
-        <li><a href="#watch" data-toc>Watch</a></li>
-        <li><a href="#home" data-toc>Home</a></li>
-        <li><a href="#rituals" data-toc>Rituals</a></li>
         <li><a href="#screens" data-toc>Final Screens</a></li>
         <li><a href="#reflection" data-toc>Reflection</a></li>
       </ol>
@@ -141,110 +137,72 @@
         <p class="case__kicker">Solution</p>
         <h2 class="case__h2">Promote self-awareness through mood setting, gentle check-ins, and symbolic rituals.</h2>
         <p class="case__body">
-          Between is designed to encourage emotional vocabulary and reflection — turning each of the three problem areas into a gentler, more intentional pattern of connection.
+          Between brings this to life as a pairing of a quiet wearable and a calm companion app — emotional presence without pressure or noise. A handful of focused features turn each problem area into a gentler, more intentional pattern of connection.
         </p>
 
         <div class="opps">
           <article class="opp">
-            <h3>Syncing schedules and life rhythms.</h3>
+            <h3><span class="opp__num">01 —</span> Syncing schedules and life rhythms.</h3>
             <p>Prompts and emotional updates are asynchronous. Each person can respond in their own time, yet feel heard and emotionally seen.</p>
           </article>
           <article class="opp">
-            <h3>Calming down tech environments.</h3>
-            <p>Designed as a calm technology that blends into daily life, enhancing presence without overwhelming attention.</p>
+            <h3><span class="opp__num">02 —</span> A wearable that keeps you present.</h3>
+            <p>The watch quietly monitors your mood and status throughout the day and updates the app on its own. So even when you're too busy to check in or your time zones don't line up, your partner still feels your presence, no message required.</p>
           </article>
           <article class="opp">
-            <h3>Making digital interactions meaningful.</h3>
-            <p>Encourages meaningful microinteractions that are personal, not performative.</p>
+            <h3><span class="opp__num">03 —</span> Send a drift.</h3>
+            <p>Send a photo or voice memo that drifts in the background of their day until they're ready to look — closeness without the pressure to reply right away.</p>
+            <div class="drift-actions" aria-hidden="true">
+              <span class="drift-btn">
+                <span class="drift-btn__icon drift-btn__icon--pink">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7H7l1.5-2h7L17 7h2.5A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.2"/></svg>
+                </span>
+                <span class="drift-btn__label">Snap a picture</span>
+              </span>
+              <span class="drift-btn">
+                <span class="drift-btn__icon drift-btn__icon--mint">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><g transform="rotate(40 12 12)"><rect x="9" y="1.5" width="6" height="9" rx="3"/><rect x="10.8" y="9.5" width="2.4" height="11.5" rx="1.2"/></g></svg>
+                </span>
+                <span class="drift-btn__label">Record a memo</span>
+              </span>
+            </div>
+          </article>
+          <article class="opp">
+            <h3><span class="opp__num">04 —</span> Echo of the day.</h3>
+            <p>A gentle prompt arrives at a random moment each day, inviting a small reflection that builds emotional vocabulary instead of small talk.</p>
+            <div class="echo-card" aria-hidden="true">
+              <div class="echo-card__avatars">
+                <span class="echo-avatar">
+                  <img src="images/between/echo-smirk.jpeg" alt="" loading="lazy" />
+                  <span class="echo-avatar__badge echo-avatar__badge--ok">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7"/></svg>
+                  </span>
+                </span>
+                <span class="echo-avatar">
+                  <img src="images/between/echo-wah.jpeg" alt="" loading="lazy" />
+                  <span class="echo-avatar__badge echo-avatar__badge--no">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+                  </span>
+                </span>
+              </div>
+              <div class="echo-card__body">
+                <p class="echo-card__q">What’s one thing that made you smile today? And why?</p>
+                <p class="echo-card__sub">Take the time to reflect and be sure to include media in your answer</p>
+                <div class="echo-card__actions">
+                  <span class="echo-card__btn">Remind Me Later</span>
+                  <span class="echo-card__btn echo-card__btn--answer">Answer</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="opp">
+            <h3><span class="opp__num">05 —</span> Your partner's presence, at a glance.</h3>
+            <p>On the watch and the app's home widget, your partner's live mood and status surface quietly — "Lily is on her lunch break: well-rested, caffeinated, peaceful" — and you can answer with a haptic touch or a quick voice memo.</p>
+            <div class="watch-shot" aria-hidden="true">
+              <img src="images/between/watch.png" alt="" loading="lazy" />
+            </div>
           </article>
         </div>
-      </section>
-
-      <!-- CONCEPT -->
-      <section id="concept" class="case__section">
-        <div class="callout concept">
-          <span class="callout__mark">✦ Concept ✦</span>
-          <p class="concept__name">between</p>
-          <p>For the relationships that matter most, this is emotional presence without pressure. Touch, reflect, and grow closer. One small moment at a time.</p>
-        </div>
-      </section>
-
-      <!-- WATCH -->
-      <section id="watch" class="case__section">
-        <p class="case__kicker">Watch</p>
-        <h2 class="case__h2">A quiet wearable that surfaces presence, not notifications.</h2>
-        <p class="case__body">
-          The watch shows your partner's mood and current status — "Lily is on her lunch break, well-rested, caffeinated, peaceful" — and lets you respond with a haptic touch or a quick voice memo. It's designed to fade into daily life, offering presence without demanding attention.
-        </p>
-        <div class="solution__media" aria-hidden="true"></div>
-      </section>
-
-      <!-- HOME -->
-      <section id="home" class="case__section">
-        <p class="case__kicker">Home</p>
-        <h2 class="case__h2">A home screen built around emotional context, not notifications.</h2>
-        <p class="case__body">
-          The app's home centers on four gentle signals — what your partner is doing, what you want to send them, what to reflect on, and how they've been feeling lately.
-        </p>
-
-        <div class="opps opps--two">
-          <article class="opp">
-            <h3>Partner widget.</h3>
-            <p>Shows your partner's current mood and status at a glance.</p>
-          </article>
-          <article class="opp">
-            <h3>Send a drift.</h3>
-            <p>Pictures or memos drift quietly until your partner is ready to view them — no pressure to respond.</p>
-          </article>
-          <article class="opp">
-            <h3>Echo of the day.</h3>
-            <p>Gentle prompts arrive randomly throughout the day, inviting reflection without demanding it.</p>
-          </article>
-          <article class="opp">
-            <h3>Weather of their heart.</h3>
-            <p>An emotional forecast based on your partner's recent moods, visualized as a soft landscape.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- RITUALS -->
-      <section id="rituals" class="case__section">
-        <p class="case__kicker">Rituals</p>
-        <h2 class="case__h2">Four small rituals that grow into something shared.</h2>
-        <p class="case__body">
-          Drifts arrive without urgency, echoes invite reflection rather than reaction, and the memory garden becomes a soft archive of the small moments that hold a relationship together.
-        </p>
-
-        <ol class="rituals">
-          <li class="ritual">
-            <span class="ritual__num">01</span>
-            <div>
-              <h3>Picture drift</h3>
-              <p>Snap a quiet moment. Send it. It drifts in the background of their day until they're ready to look.</p>
-            </div>
-          </li>
-          <li class="ritual">
-            <span class="ritual__num">02</span>
-            <div>
-              <h3>Memo drift</h3>
-              <p>Record a short voice memo — a laugh, a thought, a goodnight — and let it wait for them.</p>
-            </div>
-          </li>
-          <li class="ritual">
-            <span class="ritual__num">03</span>
-            <div>
-              <h3>Echo</h3>
-              <p>Answer a shared prompt with a few sentences or a voice note. Reflection over reaction.</p>
-            </div>
-          </li>
-          <li class="ritual">
-            <span class="ritual__num">04</span>
-            <div>
-              <h3>Memory garden</h3>
-              <p>Drifts and echoes settle into a shared garden that grows over time — a soft archive of small moments.</p>
-            </div>
-          </li>
-        </ol>
       </section>
 
       <!-- FINAL SCREENS -->
@@ -254,11 +212,22 @@
         <p class="case__body">
           The final screens bring the watch, home, drifts, echoes, and the memory garden into a single calm system — designed to sit quietly in the background of daily life until something small and meaningful is worth surfacing.
         </p>
-        <div class="screens__media" aria-hidden="true"></div>
-        <div class="screens__row">
-          <div class="screens__phone" aria-hidden="true"></div>
-          <div class="screens__phone" aria-hidden="true"></div>
-          <div class="screens__phone" aria-hidden="true"></div>
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport">
+            <ul class="carousel__track">
+              <li class="carousel__slide"><div class="carousel__phone" aria-hidden="true"></div></li>
+              <li class="carousel__slide"><div class="carousel__phone" aria-hidden="true"></div></li>
+              <li class="carousel__slide"><div class="carousel__phone" aria-hidden="true"></div></li>
+              <li class="carousel__slide"><div class="carousel__phone" aria-hidden="true"></div></li>
+            </ul>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" aria-label="Previous screen" type="button">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Next screen" type="button">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="carousel__dots" role="tablist" aria-label="Choose screen"></div>
         </div>
       </section>
 
@@ -280,7 +249,7 @@
           </article>
           <article class="reflect__card">
             <p class="reflect__kicker">What I'd change</p>
-            <p>Prototyping the haptic side of the watch sooner — paper and Figma can only carry a calm-technology concept so far.</p>
+            <p>I'd bring in agentic AI — an on-device agent that senses mood and surfaces the right moments to stay present, so connection feels effortless rather than one more thing to manage.</p>
           </article>
           <article class="reflect__card">
             <p class="reflect__kicker">What's next</p>

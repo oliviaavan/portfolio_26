@@ -77,11 +77,6 @@
   margin-top: 32px;
 }
 
-/* Full-width research heading */
-#research .case__h2 {
-  max-width: none;
-}
-
 /* Reflection card body text in gray */
 .reflect__card p:last-child {
   color: var(--ink-mute);

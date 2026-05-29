@@ -133,10 +133,11 @@
 /* ---------- STUDY TABLE ---------- */
 .study-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin: 14px 0 6px;
   font-size: 13.5px;
-  border: 1px solid var(--hb-line);
+  border: 1px solid #d1d5db;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -273,13 +274,14 @@
   gap: 8px;
   padding: 22px 24px 24px;
   border-radius: 10px;
-  background: var(--hb-soft);
+  background: #fff;
+  border: 1px solid #d1d5db;
   color: var(--ink);
   text-decoration: none;
-  transition: transform .2s ease, background .2s ease;
+  transition: transform .2s ease, border-color .2s ease;
 }
 .proj-card:hover {
-  background: var(--hb-soft-2);
+  border-color: #9ca3af;
   transform: translateY(-2px);
 }
 
@@ -355,4 +357,113 @@
   line-height: 1.55;
   color: var(--ink-mute);
   margin: 0;
+}
+
+/* Walkthrough lead-in heading inside the Designs section */
+.case__h2--gap { margin-top: 36px; }
+
+/* Walkthrough — connected story across screens */
+.story {
+  list-style: none;
+  margin: 28px 0 40px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.story__step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.story__no {
+  margin-right: 10px;
+}
+.story__role {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin: 0 0 5px;
+}
+.story__title {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+  margin: 0;
+}
+.story__body {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-mute);
+  margin: 0;
+}
+.story__figure {
+  --frame-h: 440px;
+  position: relative;
+  margin: 4px 0 0;
+  height: var(--frame-h);
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--hb-line);
+  background: #f3f3f3;
+}
+.story__shot {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Slowly pans the tall capture from top to bottom on hover. */
+  transform: translateY(0);
+  transition: transform 7s ease;
+}
+.story__figure:hover .story__shot {
+  transform: translateY(calc(-100% + var(--frame-h)));
+}
+/* Subtle hint that the frame scrolls. */
+.story__figure::after {
+  content: "hover to scroll";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(20, 20, 20, .62);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity .25s ease;
+}
+.story__figure:hover::after { opacity: 0; }
+
+/* Content cards (workflows, insights): white fill, gray stroke */
+.opp {
+  background: #fff;
+  border: 1px solid #d1d5db;
+}
+
+/* Prototype walkthrough video */
+.proto-video {
+  margin: 18px 0 6px;
+}
+.proto-video__el {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #f3f3f3;
+}
+.proto-video__cap {
+  margin: 10px 0 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: var(--ink-mute);
 }

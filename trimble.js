@@ -22,6 +22,10 @@
   const reveal = () => {
     locked.hidden = true;
     unlocked.hidden = false;
+    // Persist unlock so the gated project pages don't bounce back here.
+    try {
+      sessionStorage.setItem("trimble:unlocked", "1");
+    } catch (_) {}
   };
 
   form.addEventListener("submit", (e) => {

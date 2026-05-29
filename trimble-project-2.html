@@ -59,7 +59,7 @@
         <li><a href="#problem" data-toc>Problem</a></li>
         <li><a href="#role" data-toc>My Role</a></li>
         <li><a href="#designs" data-toc>Designs</a></li>
-        <li><a href="#screens" data-toc>Final Screens</a></li>
+        <li><a href="#reflection" data-toc>Reflection</a></li>
       </ol>
     </aside>
     </div>
@@ -134,36 +134,101 @@
 
         <div class="persona-compare">
           <figure class="persona">
-            <img class="persona__shot" src="images/wc-dashboard-pm.jpg" alt="WorkCenter home dashboard for a general contractor / project manager, showing an estimates overview, prioritized tasks with AI-flagged risks, and a calendar." loading="lazy" />
             <figcaption>
               <p class="persona__role">GC / Project Manager</p>
               <p class="persona__name">Portfolio-level overview</p>
               <p class="persona__desc">A wide view across every project — estimate progress, prioritized tasks with AI-flagged risks, and an at-a-glance schedule for managing the whole book of work.</p>
             </figcaption>
+            <img class="persona__shot" src="images/wc-dashboard-pm.jpg" alt="WorkCenter home dashboard for a general contractor / project manager, showing an estimates overview, prioritized tasks with AI-flagged risks, and a calendar." loading="lazy" />
           </figure>
 
           <figure class="persona">
-            <img class="persona__shot" src="images/wc-dashboard-estimator.jpg" alt="WorkCenter home dashboard for an estimator, showing a shared bid assembly hub, a cost estimate workflow with handoff statuses, and live supplier exchange pricing." loading="lazy" />
             <figcaption>
               <p class="persona__role">Estimator</p>
               <p class="persona__name">Bid-level workspace</p>
               <p class="persona__desc">A focused view into a single estimate — a shared bid assembly hub, deliverable handoffs and statuses, and live supplier pricing pulled in to keep the number accurate.</p>
             </figcaption>
+            <img class="persona__shot" src="images/wc-dashboard-estimator.jpg" alt="WorkCenter home dashboard for an estimator, showing a shared bid assembly hub, a cost estimate workflow with handoff statuses, and live supplier exchange pricing." loading="lazy" />
           </figure>
         </div>
+
+        <h2 class="case__h2 case__h2--gap">One project, one thread — from a won bid to a weather call that reaches the PM in minutes.</h2>
+        <p class="case__body">
+          The clearest way to show what the revamp unlocks is to follow a single job through it. Eldorado is a recreation-center build — a gymnasium, a multipurpose hall, and a lobby entrance canopy. Here's how one platform carries that project from an awarded bid, into the field, and back to the project manager's desk — without anyone re-entering the work.
+        </p>
+
+        <ol class="story">
+          <li class="story__step">
+            <div class="story__head">
+              <p class="story__role">Just after award · Bert, project manager</p>
+              <h3 class="story__title"><span class="story__no">01</span>The bid is won — and the hub is already built.</h3>
+            </div>
+            <p class="story__body">
+              Pamela's winning estimate doesn't get re-keyed or handed off in a slide deck. The moment Eldorado is awarded, WorkCenter syncs the bid, budget, and scope into a single post-award hub and hands Bert a configuration checklist instead of a blank project. Three days after award he's already 66% set up — bid and contract confirmed, schedule and milestones locked, team and cost codes mapping in. The one thing standing between him and a live, ERP-synced project is flagged in plain sight: Site Mobilization is blocked on a city permit, with the owner and the exact queue time called out so Bert knows precisely what to chase. Everything that used to live in scattered spreadsheets and email threads is staged in one place, ready to activate.
+            </p>
+            <figure class="story__figure">
+              <img class="story__shot" src="images/wc-setup-bert.jpg" alt="Bert's WorkCenter post-award setup hub for the Eldorado project — a configuration checklist showing bid confirmation, contract, team, cost codes, schedule, and a blocked site-mobilization permit, with an Activate Project & Sync to ERP button." loading="lazy" />
+            </figure>
+          </li>
+
+          <li class="story__step">
+            <div class="story__head">
+              <p class="story__role">Out on the jobsite · Marcus, field foreman</p>
+              <h3 class="story__title"><span class="story__no">02</span>Ball rolling — and the field sees the risk before it happens.</h3>
+            </div>
+            <p class="story__body">
+              Fast-forward: the project is live and the work has momentum. Marcus opens his dashboard to the day's critical path — and the gymnasium slab pour, scheduled for 7 AM tomorrow, carries an AI-surfaced warning: a storm is forecast to hit inside the pour window. Concrete doesn't wait, and a compromised pour is expensive to redo. Marcus doesn't have to phone the office or dig for the right form — he taps <strong>Log Issue</strong>, and the weather risk drops straight into his daily log, the running record of everything that happens on site. WorkCenter already has the context wrapped around it: the 100 CY of ready-mix is in transit with a 1:30 ETA, the crew is staffed, and the pour reads "On Track" right up until he flags it.
+            </p>
+            <figure class="story__figure">
+              <img class="story__shot" src="images/wc-field-marcus.jpg" alt="Marcus's WorkCenter field foreman dashboard — today's critical path with a flagged gymnasium slab pour and storm warning, a daily log and production list, open safety alerts, and materials and deliveries in transit." loading="lazy" />
+            </figure>
+          </li>
+
+          <li class="story__step">
+            <div class="story__head">
+              <p class="story__role">Back in the office · Bert, project manager</p>
+              <h3 class="story__title"><span class="story__no">03</span>The PM knows in minutes — not at the morning meeting.</h3>
+            </div>
+            <p class="story__body">
+              Because the field and the office share one system, Marcus's log entry doesn't sit in a notebook until tomorrow's standup — it surfaces at the top of Bert's hub as a red alert: <em>Concrete Pour Compromised</em>. The same entry that took Marcus one tap to file now tells Bert everything he needs to make the call: the storm hits during the gymnasium pour, Marcus flagged it through his daily log, the next delivery window is four days out, and the estimated delay cost is $35K. One tap to escalate. No status chase, no telephone game between trailer and office — the signal that began as Pamela's estimate and Marcus's field observation reaches the decision-maker as a single, costed, actionable thread.
+            </p>
+            <figure class="story__figure">
+              <img class="story__shot" src="images/wc-alert-bert.jpg" alt="Bert's WorkCenter hub showing a red Rain Storm Alert banner — concrete pour compromised, notified through Marcus's daily log, next delivery window in four days, $35K estimated delay cost — above the project setup checklist." loading="lazy" />
+            </figure>
+          </li>
+        </ol>
+
+        <p class="case__body">
+          That's the throughline of the revamp: one project, one source of truth, and agentic AI that moves the right signal to the right person — across estimating, the office, and the field — so a weather call that could cost $35K reaches the person who can act on it while there's still time to act.
+        </p>
       </section>
 
-      <!-- FINAL SCREENS -->
-      <section id="screens" class="case__section">
-        <p class="case__kicker">Final Screens</p>
-        <h2 class="case__h2">Content coming soon.</h2>
-        <p class="case__body">Content coming soon.</p>
+      <!-- REFLECTION -->
+      <section id="reflection" class="case__section">
+        <p class="case__kicker">Reflection</p>
+        <h2 class="case__h2">Designing for a platform this big meant designing for the connections, not just the screens.</h2>
+        <p class="case__body">
+          The hardest and most rewarding part of WorkCenter wasn't any single interface — it was making separate products, roles, and moments feel like one continuous system. Working alongside senior designers and managers, I learned to zoom out from "what does this screen need" to "what does this person need to know right now, and where did that information come from." That shift in altitude changed how I designed everything that followed.
+        </p>
 
-        <div class="screens__media" aria-hidden="true"></div>
-        <div class="screens__row">
-          <div class="screens__phone" aria-hidden="true"></div>
-          <div class="screens__phone" aria-hidden="true"></div>
-          <div class="screens__phone" aria-hidden="true"></div>
+        <div class="reflect">
+          <article class="reflect__card">
+            <p class="reflect__kicker">What worked</p>
+            <p>Anchoring the work in real construction workflows kept the AI grounded — it surfaced risk and context people actually act on, instead of novelty. Designing the home view around roles, then proving it with an end-to-end scenario, made the value easier to feel than any feature list could.</p>
+          </article>
+          <article class="reflect__card">
+            <p class="reflect__kicker">What I'd change</p>
+            <p>I'd get these flows in front of real contractors and estimators sooner. A lot of the logic held up in critique, but field users have instincts about edge cases — bad weather, delayed materials, crew changes — that I could only approximate from the outside.</p>
+          </article>
+          <article class="reflect__card">
+            <p class="reflect__kicker">What's next</p>
+            <p>I want to keep pushing on the agentic layer: how much should the system recommend versus decide, and how do we keep people in control as it gets more capable? That balance of trust and automation is the question I'm most excited to design around next.</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <span class="callout__mark">✦ Under NDA ✦</span>
+          <p>This is as much as I can share. WorkCenter is confidential, so the screens and story here are the most I'm able to show publicly — I'd love to walk through the deeper thinking, trade-offs, and process in conversation.</p>
         </div>
       </section>
 
