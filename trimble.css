@@ -450,6 +450,7 @@
 /* Prototype walkthrough video */
 .proto-video {
   margin: 18px 0 6px;
+  max-width: 560px;
 }
 .proto-video__el {
   width: 100%;
