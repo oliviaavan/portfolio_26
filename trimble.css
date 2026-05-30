@@ -441,10 +441,27 @@
 }
 .story__figure:hover::after { opacity: 0; }
 
-/* Content cards (workflows, insights): white fill, gray stroke */
+/* Content cards (insights): white fill, gray stroke */
 .opp {
   background: #fff;
   border: 1px solid #d1d5db;
+}
+
+/* Workflow list: numbered text list, no containers */
+#prototype .opps {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+  row-gap: 40px;
+  align-items: start;
+}
+@media (max-width: 600px) {
+  #prototype .opps { grid-template-columns: 1fr; }
+}
+#prototype .opp {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
 }
 
 /* Prototype walkthrough video */

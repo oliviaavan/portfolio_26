@@ -213,7 +213,8 @@
 /* ---------- CHALLENGE CALLOUT ---------- */
 
 .callout {
-  background: var(--hb-soft);
+  background: #fff;
+  border: 1px solid var(--line, #d1d1d1);
   border-radius: 8px;
   padding: 22px 28px 24px;
   text-align: center;
@@ -563,7 +564,8 @@
 }
 
 .reflect__card {
-  background: var(--hb-soft);
+  background: #fff;
+  border: 1px solid var(--line, #d1d1d1);
   border-radius: 8px;
   padding: 18px 20px 20px;
 }
