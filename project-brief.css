@@ -1,0 +1,65 @@
+/* Simple brief-style project pages (Creative Juices, Design Lecture Series)
+   — additions on top of styles.css + hearbat.css */
+
+/* Hero cover for brief pages */
+.case__cover--creative-juices {
+  background-image: url("images/creative-juices-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.case__cover--design-lecture-series {
+  background-image: url("images/design-lecture-series-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Image galleries */
+.gallery {
+  display: grid;
+  gap: 18px;
+  margin-top: 22px;
+}
+.gallery--two   { grid-template-columns: repeat(2, 1fr); }
+.gallery--three { grid-template-columns: repeat(3, 1fr); }
+.gallery--stack { grid-template-columns: 1fr; }
+
+.gallery figure { margin: 0; }
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.gallery figcaption {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: var(--ink-mute);
+}
+
+/* Placeholder tiles shown until real images are added */
+.gallery__placeholder {
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: var(--card-bg);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: var(--ink-mute);
+  text-align: center;
+  padding: 12px;
+}
+
+@media (max-width: 720px) {
+  .gallery--two,
+  .gallery--three { grid-template-columns: 1fr; }
+}

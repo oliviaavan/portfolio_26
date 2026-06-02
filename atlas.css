@@ -1,5 +1,12 @@
 /* Atlas case study — additions on top of hearbat.css */
 
+.case__cover--atlas {
+  background-image: url("images/atlas-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .case__quotes {
   list-style: none;
   padding: 0;

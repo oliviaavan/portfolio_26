@@ -1,5 +1,19 @@
 /* Trimble case study — additions on top of hearbat.css */
 
+.case__cover--prism {
+  background-image: url("images/prism-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.case__cover--workcenter {
+  background-image: url("images/workcenter-hero.png?v=2");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* ---------- PROJECT TAB NAV ---------- */
 .proj-tabs {
   display: flex;

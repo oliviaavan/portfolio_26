@@ -1,5 +1,12 @@
 /* between case study — additions on top of hearbat.css + atlas.css */
 
+.case__cover--between {
+  background-image: url("images/between-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Problem cards: one row, white fill + gray stroke */
 #problem .opps {
   grid-template-columns: repeat(3, 1fr);
