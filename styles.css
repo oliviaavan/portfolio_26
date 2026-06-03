@@ -831,3 +831,82 @@ a.card * {
   .chat__row { opacity: 1; transform: none; animation: none; }
   .play__wip-dot, .chat__typing span { animation: none; }
 }
+
+/* ============================================================
+   MOBILE FLOATING TABLE OF CONTENTS
+   On phones the TOC collapses into a floating button that
+   follows the user; tapping it opens the section list, and
+   tapping a section smooth-scrolls there (handled in hearbat.js).
+   The .toc__fab button is injected by JS and hidden on desktop.
+   ============================================================ */
+
+.toc__fab { display: none; }
+
+@media (max-width: 768px) {
+  /* The TOC shrinks to just the floating button in the corner.
+     `aside.toc` keeps specificity above hearbat.css's `.toc` rule so the
+     desktop border/background never bleeds into the mobile floating view. */
+  aside.toc {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1000;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    pointer-events: none; /* only the button + panel catch taps */
+  }
+
+  /* The round floating button. */
+  .toc__fab {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid var(--ink-mute);
+    background: #fff;
+    color: var(--ink);
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.2s ease;
+  }
+  .toc__fab svg { width: 22px; height: 22px; }
+  .toc.is-open .toc__fab { transform: scale(0.92); }
+
+  /* The section list: absolutely positioned above the button, so it takes
+     up NO space when closed (this is what fixes the empty rectangle). */
+  .toc__panel {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 12px);
+    width: min(74vw, 280px);
+    margin: 0;
+    background: #fff;
+    border: 1px solid var(--ink);
+    border-radius: 14px;
+    padding: 16px 18px 14px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.20);
+    pointer-events: auto;
+    transform-origin: bottom right;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.96);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  }
+  .toc.is-open .toc__panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Roomier tap targets inside the panel. */
+  .toc__panel .toc__title { margin-bottom: 10px; }
+  .toc__panel .toc__list a { padding: 9px 0; font-size: 15px; }
+}

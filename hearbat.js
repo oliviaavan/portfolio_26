@@ -14,6 +14,56 @@
     });
   };
 
+  // Keep section headings clear of the sticky masthead when scrolled to.
+  sections.forEach((s) => { s.style.scrollMarginTop = '76px'; });
+
+  // ----- Mobile: collapse the TOC into a floating, tappable button -----
+  const toc = document.querySelector('.toc');
+  let closeMobile = () => {};
+  if (toc) {
+    // Wrap the title + list so they can be shown as a popover card on mobile.
+    const panel = document.createElement('div');
+    panel.className = 'toc__panel';
+    const title = toc.querySelector('.toc__title');
+    const list = toc.querySelector('.toc__list');
+    if (title) panel.appendChild(title);
+    if (list) panel.appendChild(list);
+    toc.appendChild(panel);
+
+    // Floating button (only visible on mobile, via CSS).
+    const fab = document.createElement('button');
+    fab.type = 'button';
+    fab.className = 'toc__fab';
+    fab.setAttribute('aria-label', 'Table of contents');
+    fab.setAttribute('aria-expanded', 'false');
+    fab.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">' +
+      '<line x1="9" y1="7" x2="20" y2="7"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="17" x2="20" y2="17"/>' +
+      '<circle cx="4.5" cy="7" r="1.2" fill="currentColor" stroke="none"/>' +
+      '<circle cx="4.5" cy="12" r="1.2" fill="currentColor" stroke="none"/>' +
+      '<circle cx="4.5" cy="17" r="1.2" fill="currentColor" stroke="none"/></svg>';
+    toc.appendChild(fab);
+
+    const setOpen = (open) => {
+      toc.classList.toggle('is-open', open);
+      fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    closeMobile = () => setOpen(false);
+
+    fab.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setOpen(!toc.classList.contains('is-open'));
+    });
+
+    // Tap anywhere outside the open panel to close it.
+    document.addEventListener('click', (e) => {
+      if (toc.classList.contains('is-open') && !toc.contains(e.target)) setOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setOpen(false);
+    });
+  }
+
   // Smooth scroll
   links.forEach((a) => {
     a.addEventListener('click', (e) => {
@@ -24,6 +74,7 @@
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       history.replaceState(null, '', href);
       setActive(target.id);
+      closeMobile(); // collapse the floating menu after picking a section
     });
   });
 
