@@ -22,6 +22,8 @@
   const reveal = () => {
     locked.hidden = true;
     unlocked.hidden = false;
+    // Drop the NDA card framing so the project cards shift up flush.
+    gate.classList.add("is-unlocked");
     // Persist unlock so the gated project pages don't bounce back here.
     try {
       sessionStorage.setItem("trimble:unlocked", "1");

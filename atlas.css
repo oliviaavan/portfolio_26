@@ -310,3 +310,24 @@
   background: #d9d9d9;
   border-radius: 16px;
 }
+
+/* Prototype walkthrough video — cropped phone-only, autoplay loop, no chrome */
+.proto-video {
+  margin: 18px auto 6px;
+  max-width: 300px;
+  text-align: center;
+}
+.proto-video__el {
+  width: 100%;
+  display: block;
+  aspect-ratio: 540 / 1100;
+  object-fit: cover;
+  border-radius: 50px;
+}
+.proto-video__cap {
+  margin: 10px 0 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: var(--ink-mute);
+}

@@ -179,3 +179,9 @@
   max-width: 150px;
   height: auto;
 }
+
+/* Prototype walkthrough video — Between phone dimensions + corner radius */
+.proto-video__el {
+  aspect-ratio: 540 / 1126;
+  border-radius: 46px;
+}
