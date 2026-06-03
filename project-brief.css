@@ -31,8 +31,15 @@
   width: 100%;
   height: auto;
   display: block;
+  box-sizing: border-box;
   border-radius: 10px;
   border: 1px solid var(--line);
+}
+
+/* Full-bleed variant: no border/radius, image spans full width */
+.gallery--bleed img {
+  border: none;
+  border-radius: 0;
 }
 
 .gallery figcaption {
