@@ -217,11 +217,11 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.35;
   margin: 14px auto 0;
   font-weight: 500;
-  white-space: nowrap;
+  max-width: 64ch;
 }
 
 @media (max-width: 720px) {
-  .hero__lede { white-space: normal; max-width: 32ch; }
+  .hero__lede { max-width: 32ch; }
 }
 
 /* ---------- Work grid ---------- */
