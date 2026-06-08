@@ -163,6 +163,7 @@
 .case__meta dt {
   font-family: var(--font-mono);
   font-size: 10px;
+  font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--ink);
@@ -208,6 +209,28 @@
   line-height: 1.65;
   color: var(--ink-mute);
   margin: 0 0 16px;
+}
+
+/* ---------- AWARD CERTIFICATE ---------- */
+
+.case__award {
+  margin: 22px 0 6px;
+}
+.case__award img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--hb-line);
+  border-radius: 10px;
+}
+.case__award figcaption {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* ---------- CHALLENGE CALLOUT ---------- */
@@ -391,7 +414,7 @@
   font-weight: 700;
   margin: 0 0 10px;
   letter-spacing: -.005em;
-  color: var(--ink-mute);
+  color: var(--ink);
 }
 .opp--row .opp__copy p {
   font-size: 14px;
@@ -581,6 +604,6 @@
 .reflect__card p:last-child {
   font-size: 13px;
   line-height: 1.55;
-  color: var(--ink);
+  color: var(--ink-mute);
   margin: 0;
 }
